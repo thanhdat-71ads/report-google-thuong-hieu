@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="vi">
 <head>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%233b82f6%22 stroke-width=%222.2%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z%22/%3E%3Ccircle cx=%2212%22 cy=%229.5%22 r=%222.6%22/%3E%3C/svg%3E">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Report Google Thương Hiệu</title>
+<title>REPORT GOOGLE THƯƠNG HIỆU</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +93,7 @@ html.lg-locked,html.lg-locked body{overflow:hidden!important}
     #f6f8fc;
   display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:32px 24px}
 #lgRoot.lg-hidden{display:none}
-#lgRoot .lg-wrap{margin-top:auto;width:100%;max-width:1180px;display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center}
+#lgRoot .lg-wrap{margin:auto 0;width:100%;max-width:1180px;display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center}
 
 /* --- Cột trái: giới thiệu --- */
 #lgRoot .lg-brand{display:flex;align-items:center;gap:12px;margin-bottom:34px}
@@ -142,7 +143,7 @@ html.lg-locked,html.lg-locked body{overflow:hidden!important}
 @keyframes lgShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
 
 /* Dải credit cuối trang đăng nhập */
-#lgRoot .lg-credit{display:inline-flex;align-items:center;gap:10px;margin:28px 0 auto;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid #e2e8f0;box-shadow:0 6px 18px rgba(51,65,110,.10);font-size:12px;color:#475569;white-space:nowrap}
+#lgRoot .lg-credit{display:inline-flex;align-items:center;gap:10px;margin:28px 0 0;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid #e2e8f0;box-shadow:0 6px 18px rgba(51,65,110,.10);font-size:12px;color:#475569;white-space:nowrap}
 #lgRoot .lg-dot{flex:none;width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.55);animation:lgBlink 1.6s ease-in-out infinite}
 #lgRoot .lg-by b{color:#2563eb;font-weight:700}
 #lgRoot .lg-sep{flex:none;width:1px;height:12px;background:#dbe3f0}
@@ -176,6 +177,31 @@ html.lg-authed .heroActions #lgOut{display:inline-flex;gap:8px}
   #lgRoot .lg-card{order:-1}
   #lgRoot .lg-intro{order:1}
 }
+
+/* ===== CĂN ĐỀU + VIỀN SÁNG KHUNG ĐĂNG NHẬP (thêm mới) ===== */
+#lgRoot .lg-desc{max-width:520px;text-align:justify;text-justify:inter-word}
+#lgRoot .lg-feats{max-width:520px;gap:14px}
+#lgRoot .lg-feat{align-items:center;min-height:46px}
+#lgRoot .lg-feat > div{flex:1;min-width:0}
+#lgRoot .lg-feat p{text-align:justify;text-justify:inter-word}
+@property --lgc-angle{syntax:'<angle>';inherits:false;initial-value:0deg}
+#lgRoot .lg-card{position:relative}
+#lgRoot .lg-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:3px;pointer-events:none;
+  background:conic-gradient(from var(--lgc-angle),transparent 0deg,transparent 240deg,rgba(59,130,246,.2) 262deg,#3b82f6 318deg,#a78bfa 350deg,transparent 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  filter:drop-shadow(0 0 10px rgba(99,102,241,.7));
+  animation:lgCardSpin 4s linear infinite}
+@keyframes lgCardSpin{to{--lgc-angle:360deg}}
+@media (prefers-reduced-motion:reduce){#lgRoot .lg-card::before{animation:none}}
+
+/* ===== CĂN BỐ CỤC NGANG DỌC TRANG ĐĂNG NHẬP (thêm mới, theo mẫu Hub) ===== */
+#lgRoot .lg-wrap{max-width:1140px;grid-template-columns:minmax(0,600px) minmax(0,400px);justify-content:center;column-gap:clamp(40px,6vw,110px);align-items:center}
+#lgRoot .lg-card{width:100%;max-width:400px;justify-self:center}
+#lgRoot .lg-brand{margin-bottom:26px}
+#lgRoot .lg-feat:last-child{margin-bottom:0}
+@media (max-width:900px){#lgRoot .lg-wrap{grid-template-columns:minmax(0,440px)}}
 </style>
 
 <div id="lgRoot" role="dialog" aria-modal="true" aria-labelledby="lgTitle">
