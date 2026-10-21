@@ -107,7 +107,6 @@ html.lg-locked,html.lg-locked body{overflow:hidden!important}
 @keyframes lgBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 @keyframes lgShadow{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.7);opacity:.55}}
 @keyframes lgRipple{0%{transform:scale(.3);opacity:0}15%{opacity:.8}100%{transform:scale(3.8);opacity:0}}
-@media (prefers-reduced-motion:reduce){#lgRoot .lg-pin,#lgRoot .lg-shadow,#lgRoot .lg-ripple{animation:none}#lgRoot .lg-ripple{display:none}}
 #lgRoot .lg-brand b{display:block;font-size:15px;font-weight:700;color:#0f172a;line-height:1.2}
 #lgRoot .lg-brand span{display:block;font-size:11px;font-weight:500;color:#64748b;margin-top:2px}
 #lgRoot h1{margin:0;font-size:46px;line-height:1.12;font-weight:800;letter-spacing:-.02em;color:#0f172a}
@@ -150,7 +149,6 @@ html.lg-locked,html.lg-locked body{overflow:hidden!important}
 #lgRoot .lg-copy{color:#6b72a8;font-weight:500}
 @keyframes lgBlink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,.55)}50%{opacity:.35;box-shadow:0 0 0 6px rgba(34,197,94,0)}}
 @media (max-width:560px){#lgRoot .lg-by,#lgRoot .lg-sep{display:none}#lgRoot .lg-credit{white-space:normal;text-align:center}}
-@media (prefers-reduced-motion:reduce){#lgRoot .lg-dot{animation:none}}
 
 /* Nút đăng xuất (hiện khi đã đăng nhập) */
 #lgOut{position:relative;display:none;align-items:center;justify-content:center;height:42px;padding:0 15px;border-radius:14px;border:1px solid rgba(148,163,184,.40);background:transparent;color:#e2e8f0;font-weight:600;white-space:nowrap;cursor:pointer;transition:background .15s,border-color .15s}
@@ -169,7 +167,6 @@ html.lg-authed .heroActions #lgOut{display:inline-flex;gap:8px}
   animation:lgSpin 3s linear infinite}
 @keyframes lgSpin{to{--lg-angle:360deg}}
 #lgOut:hover::before{animation-duration:1.6s}
-@media (prefers-reduced-motion:reduce){#lgOut::before{animation:none}}
 
 @media (max-width:900px){
   #lgRoot .lg-wrap{grid-template-columns:1fr;gap:34px}
@@ -194,7 +191,6 @@ html.lg-authed .heroActions #lgOut{display:inline-flex;gap:8px}
   filter:drop-shadow(0 0 10px rgba(99,102,241,.7));
   animation:lgCardSpin 4s linear infinite}
 @keyframes lgCardSpin{to{--lgc-angle:360deg}}
-@media (prefers-reduced-motion:reduce){#lgRoot .lg-card::before{animation:none}}
 
 /* ===== CĂN BỐ CỤC NGANG DỌC TRANG ĐĂNG NHẬP (thêm mới, theo mẫu Hub) ===== */
 #lgRoot .lg-wrap{max-width:1140px;grid-template-columns:minmax(0,600px) minmax(0,400px);justify-content:center;column-gap:clamp(40px,6vw,110px);align-items:center}
